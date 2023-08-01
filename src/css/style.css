@@ -223,11 +223,6 @@ footer.sticky{
 .skeleton-loading .tipo {
     width: 50px;
 }
-  
-  @keyframes skeleton-loading {
-    0% { opacity: 1; }
-    100% { opacity: 0.5; }
-}
 
 .modal{
     display: none;
@@ -260,4 +255,38 @@ footer.sticky{
     font-size: 24px;
     cursor: pointer;
     color: #cccccced;
+}
+
+@media screen and (max-width: 630px) {
+    #notification{
+        font-size: 12px;
+    }
+
+    #notification img {
+        width: 16px;
+        height: 16px;
+    }
+
+    @media screen and (max-width: 553px) {
+        #notification{
+            font-size: 08px;
+        }
+    }
+
+    @media screen and (max-width: 481px) {
+        #notification{
+            font-size: 5px;
+        }
+
+        #notification img {
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+}
+
+@keyframes skeleton-loading {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
 }
