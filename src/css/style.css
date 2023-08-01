@@ -1,0 +1,263 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    max-width: 1280px;
+    margin: 0 auto;
+    background: rgba(94, 91, 91, 0.678);
+    color: rgb(51, 51, 51);
+}
+body.modo-escuro{
+    background: rgb(33, 33, 33);
+    color: rgb(245, 245, 245);
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+
+}
+header .logo, header .imagem-botao{
+    width: 30px;
+    transition: .1s ease-in-out;
+
+}
+header #botao-alterar-tema{
+    background: none;
+    border: none;
+}
+header .logo:hover, header .imagem-botao:hover,
+main .cartao-pokemon:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+main{
+    padding: 25px;
+    margin-bottom: 45px;
+}
+main .listagem-pokemon, .loading{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.modal-content ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.modal-content img{
+    width: 155px;
+    height: 155px;
+}
+.modal-content li{
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 10px;
+}
+.tipo-habilidade{
+    background-color: #ccc;
+    color: #000 !important;
+}
+main .cartao-pokemon{
+    background: rgb(167, 182, 195);
+    width: 200px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-radius: 45px;
+    transition: .2s ease-in-out;
+}
+main .cartao-pokemon:hover{
+    background: rgb(150, 217, 214);
+}
+
+.modo-escuro .cartao-pokemon{
+    background: rgb(168, 168, 168);
+}
+main .cartao-pokemon .informacoes{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #333333;
+    border-radius: 10px;
+}
+main .cartao-pokemon .informacoes span{
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+main .cartao-pokemon .gif{
+    width: 90px;
+    height: 90px;
+}
+main .cartao-pokemon .tipos{
+    display: flex;
+    gap: 15px;
+}
+main .cartao-pokemon .tipo{
+    padding: 8px;
+    border-radius: 10px;
+}
+.normal{
+    background: #A8A77A;
+}
+.fire{
+    background: #ee8130;
+}
+.water{
+    background: #6390f0;
+}
+.electric{
+   background: #F7D02C; 
+}
+.grass{
+    background: rgb(122, 199, 76);
+}
+.ice{
+    background: #98D8D8;
+}
+.fighting{
+    background: #C22E28;
+    color: #fff;
+}
+.poison{
+    background: #df67ddfb;
+}
+.ground{
+    background: #E2BF65;
+}
+.flying{
+    background: #A98FF3;
+}
+.psychic{
+    background:  #F95587;
+}
+.bug{
+    background: #a6b91a;
+}
+.rock{
+    background: #B6A136;
+}
+.ghost{
+    background: #735797;
+}
+.dragon{
+    background: #6F35FC;
+}
+.dark{
+    background: #705746;
+}
+.steel{
+    background: #B7B7CE;
+}
+.fairy{
+    background: #D685AD;
+}
+main .descricao{
+    max-height: 80px;
+    overflow-y: scroll;
+    font-size: 14px;
+    padding-right: 10px;
+}
+
+footer {
+    background-color: rgb(242, 242, 242);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+footer.sticky{
+    background: rgba(10, 10, 10, 0.9);
+    box-shadow: 0 0 10px rgb(0, 0, 0 / 50%);
+}
+#notification.sticky{
+    color: rgb(245, 245, 245);
+}
+#notification{
+    font-size: 16px;
+    color: #555;
+    font-weight: bold;
+    display: flex;
+    padding: 60px 150px;
+}
+#notification img{
+    width: 20px;
+    height: 20px;
+    margin: auto 10px;
+}
+
+.skeleton-loading {
+    background-color:  transparent;
+    border-radius: 5px;
+    animation: skeleton-loading 1s infinite alternate;
+  }
+
+.skeleton-loading .informacoes,
+.skeleton-loading .gif,
+.skeleton-loading .tipos,
+.skeleton-loading .descricao,
+.skeleton-loading .tipo{
+  background-color: #ccc;
+  display: none;
+}
+.skeleton-loading .informacoes {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.skeleton-loading .tipos {
+    display: flex;
+    gap: 5px;
+}
+  
+.skeleton-loading .tipo {
+    width: 50px;
+}
+  
+  @keyframes skeleton-loading {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 9999; 
+}
+.modal-content{
+    background-color: #000000e0;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.795);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 15px;
+}
+.close-modal{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #cccccced;
+}
