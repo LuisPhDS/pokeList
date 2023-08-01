@@ -135,7 +135,7 @@ window.addEventListener('load', ()=> {
             container.classList.remove('skeleton-loading');
             loadingContainer.classList.remove('loading');
         });
-    }, 5000);
+    }, 7000);
 });
 
 logo.addEventListener('click', () => {
@@ -166,7 +166,7 @@ logo.addEventListener('click', () => {
             container.classList.remove('skeleton-loading');
             loadingContainer.classList.remove('loading');
         });
-    }, 5000);
+    }, 7000);
 })
 
 const modal = document.querySelector(".modal");
